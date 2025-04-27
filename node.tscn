@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://ddfea6fjwc0lk"]
+
+[ext_resource type="Texture2D" uid="uid://12re51a7m2fd" path="res://assest/Flappy_Bird_assets by kosresetr55/Game Objects/background-day.png" id="1_cpm7p"]
+[ext_resource type="Script" path="res://Main.gd" id="1_jtwpj"]
+[ext_resource type="PackedScene" uid="uid://cr2yq4q5utv33" path="res://scenes/bird.tscn" id="2_d6d2u"]
+[ext_resource type="PackedScene" uid="uid://yqr2eolktm0b" path="res://scenes/ground.tscn" id="4_16gdb"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_jtwpj")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-855, -240.75)
+scale = Vector2(2.97917, 1.8418)
+texture = ExtResource("1_cpm7p")
+offset = Vector2(432, 384)
+
+[node name="Bird" parent="." instance=ExtResource("2_d6d2u")]
+position = Vector2(5, 10)
+
+[node name="Ground" parent="." instance=ExtResource("4_16gdb")]
